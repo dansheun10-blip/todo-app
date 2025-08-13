@@ -3,7 +3,7 @@
 This is a simple Todo App created for the [roadmap.sh Todo App project](https://roadmap.sh/projects/todo-app).
 
 ## Project Page URL
-[**Live Project Link**](https://roadmap.sh/projects/basic-html-website)
+[**Live Project Link**](https://roadmap.sh/projects/portfolio-website)
 
 ## How to Run
 1. Clone the repository:
@@ -23,5 +23,6 @@ This is a simple Todo App created for the [roadmap.sh Todo App project](https://
 **Daniel Ajakaiye**  
 - Email: dansheun10@gmail.com  
 - Phone: +234 7034259238
+
 
 
