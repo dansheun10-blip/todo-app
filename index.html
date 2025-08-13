@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+      width: calc(100% - 22px);
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      background: #eee;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+    .done {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Todo App</h1>
+    <input type="text" id="todo-input" placeholder="Enter a new task">
+    <button onclick="addTodo()">Add Task</button>
+    <ul id="todo-list"></ul>
+  </div>
+
+  <script>
+    function addTodo() {
+      const input = document.getElementById('todo-input');
+      const text = input.value.trim();
+      if (text !== "") {
+        const li = document.createElement('li');
+        li.innerHTML = `<span>${text}</span> <button onclick="removeTask(this)">❌</button>`;
+        li.querySelector('span').addEventListener('click', function() {
+          this.classList.toggle('done');
+        });
+        document.getElementById('todo-list').appendChild(li);
+        input.value = "";
+      }
+    }
+    function removeTask(button) {
+      button.parentElement.remove();
+    }
+  </script>
+</body>
+</html>
